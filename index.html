@@ -294,8 +294,6 @@
 		
 	</footer>
 
-
-
 	<!-- // footer 영역 -->
 	
 </div>
@@ -304,44 +302,24 @@
 <script type="text/javascript" src="./images/slick.min.js"></script>
 
 <script>
-
-// $('.slick_main').on('init reInit afterChange', function (event, slick, currentSlide, nextSlide) {
-//   if(!slick.$dots){
-//   	return;
-//   }
-//   var i = (currentSlide ? currentSlide : 0) + 1;
-//   $('.current_page').text('0' + i);
-//   $('.total_page').text('0' + (slick.$dots[0].children.length));
-// });
-
 $('.cb0_slick').slick({
 	autoplay: true,
 	slidesToShow: 3,
 	dots: true,
-	// centerMode: true,
+	responsive: [
+					{  
+						breakpoint: 768,
+						settings: {
+							slidesToShow: 1
+						} 
+					}
+				],
 });	
-$('.cb2_slick').slick({
-	// infinite: false,
-	autoplay: true,
-  slidesToShow: 1,
-  dots: true,
 
-// 		dots: true,
-// 		infinite: false,
-//   slidesToShow: 1,
-//   slidesToScroll: 1,
-//   arrows: false,
-//   autoplay: true,
-//   dots: true,
-//   autoplaySpeed: 4000,
-//   responsive: [
-// 					{  
-// 						breakpoint: 768,
-// 						settings: {
-// 							slidesToShow: 1
-// 						} 
-// 					}
-// 				],
+$('.cb2_slick').slick({
+	autoplay: true,
+	slidesToShow: 1,
+	dots: true,
 });
 </script>
 	
